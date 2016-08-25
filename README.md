@@ -13,7 +13,7 @@ client.get('organizations', params, function(error, organizations, response) {
 
 ## Installation
 
-`npm install qqw`
+`npm install git+ssh://git@gitlab.rindecuentas.org:2203/equipo-qqw/node-qqw.git`
 
 ## Quick Start
 
