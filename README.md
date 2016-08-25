@@ -5,6 +5,8 @@ An asynchronous client library for the Qqw [REST](https://quienesquien.wiki/api/
 ```javascript
 var Qqw = require('qqw');
 
+var client = new Qqw();
+
 var params = {name: 'accel', text: true, fields: 'name,score'};
 client.get('organizations', params, function(error, organizations, response) {
   console.log(organizations);
