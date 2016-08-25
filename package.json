@@ -1,0 +1,25 @@
+{
+  "name": "qqw",
+  "version": "0.0.1",
+  "description": "QuienEsQuienWiki API client library for node.js",
+  "license": "MIT",
+  "keywords": [
+    "qqw",
+    "quienesquienwiki",
+    "api"
+  ],
+  "scripts": {
+    "test": "npm run lint && mocha",
+    "lint": "./node_modules/.bin/eslint test/*.js lib/*.js"
+  },
+  "dependencies": {
+    "deep-extend": "^0.4.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.0",
+    "mocha": "^2.4.5",
+    "nock": "^8.0.0"
+  },
+  "main": "./lib/qqw"
+}
