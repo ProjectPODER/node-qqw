@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "npm run lint && mocha",
+    "build": "browserify lib/*.js > bundle.js",
     "lint": "./node_modules/.bin/eslint test/*.js lib/*.js"
   },
   "dependencies": {

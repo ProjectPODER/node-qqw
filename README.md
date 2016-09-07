@@ -36,3 +36,8 @@ client.get(path, params, callback);
 ## REST API
 
 You simply need to pass the endpoint and parameters to one of convenience methods.  Take a look at the [documentation site](https://quienesquien.wiki/api/v1/docs.html) to reference available endpoints.
+
+## Build for the browser
+
+`npm install -g browserify`
+`npm run build`
