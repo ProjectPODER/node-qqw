@@ -1,6 +1,21 @@
 # Examples
 
+* [POST](#POST)
 * [Search](#search)
+* [PATCH](#PATCH)
+* [Auth](#Auth)
+
+
+## POST
+
+```javascript
+client.post('persons', { name: 'Hernan Cortez' }, function(error, person, response) {
+  if (error) {
+    console.log(error);
+  }
+  console.log(person);
+});
+```
 
 ## Search
 
@@ -14,19 +29,37 @@ client.get('organizations', {name: 'accel', text: true, fields: 'name,score'}, f
 });
 ```
 
-## Proxy
+## PATCH
 
-To make requests behind a proxy, you must pass the proxy location through to the request object.  This is done by adding a `request_options` object to the configuration object.
+`npm install fast-json-patch`
 
 ```javascript
-var Qqw = require('../lib/qqw');
+var jsonpatch = require('fast-json-patch');
 
-var client = new Qqw({
-  consumer_key: process.env.QQW_CONSUMER_KEY,
-  consumer_secret: process.env.QQW_CONSUMER_SECRET,
-  access_token_key: process.env.QQW_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.QQW_ACCESS_TOKEN_SECRET,
-  request_options: {
-    proxy: 'http://myproxyserver.com:1234'
-  }
+client.get('persons', {name: 'Hernan Cortez'}, function(error, original, response) {
+  let left = person;
+  let right = assign({}, object, { gender: 'Male' });
+  let diff = jsonpatch.compare(left, right);
+
+  client.patch('persons', diff, function(error, updated, response) {
+    if (!error) {
+      console.log(updated);
+    }
+  });
+
 });
+```
+
+## Auth
+
+POST and PATCH require authorization. You can provide your **username** ande **password**
+to the constructor.
+
+```javascript
+var client = new Qqw({
+  username: 'Angry Mob',
+  password: '********'
+});
+```
+
+Now your POST request (described above) should work.
