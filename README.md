@@ -19,7 +19,7 @@ client.get('organizations', params, function(error, organizations, response) {
 
 ## Quick Start
 
-You will need valid Qqw developer credentials in the form of a set of consumer and access tokens/keys.  You can get these [here](https://quienesquien.wiki/).  Do not forgot to adjust your permissions - most POST request require write permissions.
+You will need valid Qqw credentials in the form of a valid user.  You can get these [here](https://quienesquien.wiki/).  Do not forgot to adjust your permissions - POST request require write permissions.
 
 ```javascript
 var Qqw = require('qqw');
