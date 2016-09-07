@@ -39,5 +39,7 @@ You simply need to pass the endpoint and parameters to one of convenience method
 
 ## Build for the browser
 
-`npm install -g browserify`
-`npm run build`
+```javascript
+npm install -g browserify
+npm run build
+```
