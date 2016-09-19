@@ -1,6 +1,6 @@
 # Qqw for Node.js
 
-An asynchronous client library for the Qqw [REST](https://www.quienesquien.wiki/api/v1) API.
+An asynchronous client library for the Qqw [REST](https://www.quienesquien.wiki/api/v1/index.html) API.
 
 ```javascript
 var Qqw = require('qqw');
