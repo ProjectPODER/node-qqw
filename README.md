@@ -1,6 +1,6 @@
 # Qqw for Node.js
 
-An asynchronous client library for the Qqw [REST](https://quienesquien.wiki/api/v1) API.
+An asynchronous client library for the Qqw [REST](https://www.quienesquien.wiki/api/v1/index.html) API.
 
 ```javascript
 var Qqw = require('qqw');
@@ -15,11 +15,9 @@ client.get('organizations', params, function(error, organizations, response) {
 
 ## Installation
 
-`npm install git+ssh://git@gitlab.rindecuentas.org:2203/equipo-qqw/node-qqw.git`
+`npm install https://github.com/ProjectPODER/node-qqw.git`
 
 ## Quick Start
-
-You will need valid Qqw credentials in the form of a valid user.  You can get these [here](https://quienesquien.wiki/).  Do not forgot to adjust your permissions - POST request require write permissions.
 
 ```javascript
 var Qqw = require('qqw');
@@ -35,7 +33,7 @@ client.get(path, params, callback);
 
 ## REST API
 
-You simply need to pass the endpoint and parameters to one of convenience methods.  Take a look at the [documentation site](https://quienesquien.wiki/api/v1/docs.html) to reference available endpoints.
+You simply need to pass the endpoint and parameters to one of convenience methods. Take a look at the [documentation site](https://www.quienesquien.wiki/api/v1/index.html) to reference available endpoints.
 
 ## Build for the browser
 
@@ -43,3 +41,6 @@ You simply need to pass the endpoint and parameters to one of convenience method
 npm install -g browserify
 npm run build
 ```
+## Authentication
+
+Write operations (PUT, POST, PATCH, DELETE) require credentials in the form of a valid user and formal approval from QuienEsQuien.Wiki administration. You can get these [here](https://www.quienesquien.wiki). Read operations (GET) is openly available to third parties.
