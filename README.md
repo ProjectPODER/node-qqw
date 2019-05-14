@@ -1,13 +1,13 @@
 # Qqw for Node.js
 
-An asynchronous client library for the Qqw [REST](https://www.quienesquien.wiki/api/v1/index.html) API.
+An asynchronous client library for the Qqw [REST](https://api.quienesquien.wiki/api/v1/) API.
 
 ```javascript
 var Qqw = require('qqw');
 
 var client = new Qqw();
 
-var params = {name: 'accel', text: true, fields: 'name,score'};
+var params = {name: 'accel', fields: 'name,score'};
 client.get('organizations', params, function(error, organizations, response) {
   console.log(organizations);
 });
@@ -33,7 +33,7 @@ client.get(path, params, callback);
 
 ## REST API
 
-You simply need to pass the endpoint and parameters to one of convenience methods. Take a look at the [documentation site](https://www.quienesquien.wiki/api/v1/index.html) to reference available endpoints.
+You simply need to pass the endpoint and parameters to one of convenience methods. Take a look at the [documentation site](https://api.quienesquien.wiki/api/v1/) to reference available endpoints.
 
 ## Build for the browser
 
@@ -41,6 +41,6 @@ You simply need to pass the endpoint and parameters to one of convenience method
 npm install -g browserify
 npm run build
 ```
-## Authentication
+## Authentication (DEPRECATED)
 
 Write operations (PUT, POST, PATCH, DELETE) require credentials in the form of a valid user and formal approval from QuienEsQuien.Wiki administration. You can get these [here](https://www.quienesquien.wiki). Read operations (GET) is openly available to third parties.
