@@ -1,6 +1,6 @@
 {
   "name": "qqw",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "QuienEsQuienWiki API client library for node.js",
   "license": "MIT",
   "repository": {
